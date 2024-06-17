@@ -1,0 +1,25 @@
+﻿@model Character
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_HomeLayout.cshtml";
+}
+
+<div class="col-sm-4">
+     <div >
+        <img src="@Model.image" class="img-thumbnail" style="width:300px;height:300px">
+    </div> 
+    <div class="card" style="width: 18rem;align-content:center">
+        <div class="card-header" style="color:crimson">
+            @Model.name
+        </div>
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item">@Model.status - @Model.species</li>
+            <li class="list-group-item">Last known location: @Model.location.name</li>
+            <li class="list-group-item">First seen in: @Model.origin.name</li>
+        </ul>
+    </div>
+</div>
+<div class="col-sm-8">
+
+</div>
+
